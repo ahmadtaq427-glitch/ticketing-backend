@@ -1,0 +1,220 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.dashboard-header h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-2);
+}
+
+.dashboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.dashboard-section h2 {
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ============ Stats Grid ============ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+/* ============ Stat Card ============ */
+.stat-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-xs);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card-icon {
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+}
+
+.stat-card-content {
+    flex: 1;
+}
+
+.stat-card-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.stat-card-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: var(--space-1);
+}
+
+/* Color variants */
+.stat-card-primary .stat-card-icon {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.stat-card-info .stat-card-icon {
+    background: var(--color-info-light);
+    color: var(--color-info);
+}
+
+.stat-card-success .stat-card-icon {
+    background: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.stat-card-warning .stat-card-icon {
+    background: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.stat-card-danger .stat-card-icon {
+    background: var(--color-danger-light);
+    color: var(--color-danger);
+}
+
+.stat-card-muted .stat-card-icon {
+    background: var(--color-status-closed-bg);
+    color: var(--color-status-closed);
+}
+
+/* Priority colors */
+.stat-card-priority-low .stat-card-icon {
+    background: var(--color-priority-low-bg);
+    color: var(--color-priority-low);
+}
+
+.stat-card-priority-medium .stat-card-icon {
+    background: var(--color-priority-medium-bg);
+    color: var(--color-priority-medium);
+}
+
+.stat-card-priority-high .stat-card-icon {
+    background: var(--color-priority-high-bg);
+    color: var(--color-priority-high);
+}
+
+.stat-card-priority-urgent .stat-card-icon {
+    background: var(--color-priority-urgent-bg);
+    color: var(--color-priority-urgent);
+}
+
+/* ============ Recent Tickets ============ */
+.recent-tickets {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+.recent-ticket-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    transition: background var(--transition-fast);
+}
+
+.recent-ticket-item:last-child {
+    border-bottom: none;
+}
+
+.recent-ticket-item:hover {
+    background: var(--color-bg);
+}
+
+.recent-ticket-title {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+}
+
+.recent-ticket-meta {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.recent-ticket-date {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* ============ Badges ============ */
+.badge {
+    display: inline-block;
+    padding: 2px var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: capitalize;
+}
+
+.badge-open {
+    background: var(--color-status-open-bg);
+    color: var(--color-status-open);
+}
+
+.badge-in_progress {
+    background: var(--color-status-in-progress-bg);
+    color: var(--color-status-in-progress);
+}
+
+.badge-resolved {
+    background: var(--color-status-resolved-bg);
+    color: var(--color-status-resolved);
+}
+
+.badge-closed {
+    background: var(--color-status-closed-bg);
+    color: var(--color-status-closed);
+}
+
+.badge-low {
+    background: var(--color-priority-low-bg);
+    color: var(--color-priority-low);
+}
+
+.badge-medium {
+    background: var(--color-priority-medium-bg);
+    color: var(--color-priority-medium);
+}
+
+.badge-high {
+    background: var(--color-priority-high-bg);
+    color: var(--color-priority-high);
+}
+
+.badge-urgent {
+    background: var(--color-priority-urgent-bg);
+    color: var(--color-priority-urgent);
+}
